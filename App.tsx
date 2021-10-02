@@ -6,7 +6,7 @@ import {Rajdhani_500Medium, Rajdhani_700Bold} from '@expo-google-fonts/rajdhani'
 import AppLoadding from 'expo-app-loading';
 import { useFonts } from 'expo-font'; // Importa a biblioteca de fonts do espo e a função useFonts para carregar as fontes no dispositvo
 
-import { SignIn } from './src/screens/SignIn'; // Importa os elementos View e Text do react native
+import { Home } from './src/screens/Home'; // Importa os elementos View e Text do react native
 import { Background } from './src/components/Background';
 
 export default function App(){
@@ -28,7 +28,7 @@ export default function App(){
         backgroundColor="transparent" //tira o back ground da status bar
         translucent //faz o conteúdo ocupar toda a tela
       />
-      <SignIn />
+      <Home />
     </Background>
   );
 }
