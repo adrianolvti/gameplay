@@ -1,11 +1,18 @@
 import React from 'react'; // useState Permite criar um estado para a interface
 import { View, Text, Image} from 'react-native'; // Importa os elementos View e Text do react native
+import { useNavigation } from '@react-navigation/native';
 
-import { ButtonIcon } from '../../components/ButtonIcon';
 import IllustrationImg from '../../assets/illustration.png';
 import { styles } from './styles';
 
+import { ButtonIcon } from '../../components/ButtonIcon';
+
 export function SignIn(){
+  const navigation = useNavigation();
+
+  function handleSignIn(){
+    navigation.navigate('Home');
+  }
   //Retorna um componente
   return(
     <View style={styles.container}>
@@ -29,7 +36,7 @@ export function SignIn(){
 
         <ButtonIcon 
           title="Entrar com Discord"
-          activeOpacity={0.7}
+          onPress={handleSignIn}
         />
       </View>
     </View>
